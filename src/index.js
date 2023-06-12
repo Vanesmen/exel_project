@@ -1,3 +1,3 @@
-import './scss/style';
+import './scss/index.scss';
 
-console.log('There is a contact!');
+console.log('Working!');
