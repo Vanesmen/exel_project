@@ -33,12 +33,34 @@ class Dom {
     return this;
   }
 
+  closest(selector) {
+    return $(this.$el.closest(selector));
+  }
+
   on(eventType, cb) {
     this.$el.addEventListener(eventType, cb);
   }
 
   off(eventType, cb) {
     this.$el.removeEventListener(eventType, cb);
+  }
+
+  getCoords() {
+    return this.$el.getBoundingClientRect();
+  }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
+
+  get data() {
+    return this.$el.dataset;
+  }
+
+  css(styles = {}) {
+    Object.keys(styles).forEach(key => {
+      this.$el.style[key] = styles[key];
+    });
   }
 }
 
