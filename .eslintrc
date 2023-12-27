@@ -10,7 +10,8 @@
     "operator-linebreak": ["error", "before"],
     "arrow-parens": ["error", "as-needed"],
     "linebreak-style": ["error", "windows"],
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "no-unused-vars": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
